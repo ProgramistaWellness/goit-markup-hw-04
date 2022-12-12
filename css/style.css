@@ -9,10 +9,8 @@
   --link-footercolor: (hexa) #ffffff99;
   --bottom-border-header: #e5e5e5;
   --bottom-border-portfolio: #eee;
-}
-* {
-  margin: 0;
-  padding: 0;
+  --icon-clients-color: #afb1b8;
+  --icon-clients-hover: #2196f3;
 }
 
 body {
@@ -47,8 +45,16 @@ p {
 ul {
   list-style-type: none;
   overflow: hidden;
+  margin: 0;
 }
 
+li {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
 header a {
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -109,6 +115,10 @@ header a:focus {
 .align-center {
   align-items: center;
 }
+
+.justify-center {
+  justify-content: center;
+}
 .header-navigation {
   display: flex;
   gap: 46px;
@@ -159,6 +169,15 @@ header a:focus {
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.box-hero {
+  background-color: var(--button-background);
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 
 /* about us section styling*/
@@ -188,6 +207,36 @@ header a:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
+}
+/* icon styling */
+
+.icon {
+  fill: currentColor;
+}
+.header-list .icon {
+  margin-right: 10px;
+}
+/* clients section styling */
+
+.box-clients {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  color: var(--icon-clients-color);
+}
+
+.box-icon {
+  width: 106px;
+  height: 60px;
+}
+
+.box-clients:hover,
+.box-clients:focus,
+.box-clients:hover .icon,
+.box-clients:focus .icon {
+  color: var(--icon-clients-hover);
 }
 
 /* footer styling */
