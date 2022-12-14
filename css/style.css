@@ -1,12 +1,14 @@
 :root {
-  --brand-background: #2f303a;
+  --brand-background1: #2f303a;
+  --brand-background2: #2f303a66;
   --brand-color1: #2196f3;
   --brand-color2: #000000;
   --brand-colorAccent: #ffffff;
+  --brand-colorAccent-op: #ffffff1a;
   --menu-color: #212121;
   --button-background: #f5f4fa;
   --paragraph-color: #757575;
-  --link-footercolor: (hexa) #ffffff99;
+  --link-footercolor: #ffffff99;
   --bottom-border-header: #e5e5e5;
   --bottom-border-portfolio: #eee;
   --icon-clients-color: #afb1b8;
@@ -35,6 +37,7 @@ h2 {
   line-height: 1.2;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 0;
 }
 
 p {
@@ -48,13 +51,15 @@ ul {
   margin: 0;
 }
 
-li {
-  margin: 0;
-}
-
+ul,
+li,
+p,
+h3,
 figure {
   margin: 0;
+  padding: 0;
 }
+
 header a {
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -76,10 +81,6 @@ header a:focus {
 
 .logo-web {
   color: var(--brand-color1);
-}
-
-.background-header {
-  background: var(--brand-background);
 }
 
 .section {
@@ -129,6 +130,15 @@ header a:focus {
 }
 
 /* hero section styling*/
+
+.header-image {
+  background-image: linear-gradient(
+      to bottom,
+      var(--brand-background1),
+      var(--brand-background2)
+    ),
+    url(/images/header_image.jpg);
+}
 .box-service {
   font-weight: 700;
   background-color: var(--brand-color1);
@@ -159,7 +169,6 @@ header a:focus {
 }
 
 .hero-gap p {
-  width: 270px;
   line-height: 1.7;
   text-align: left;
 }
@@ -180,26 +189,32 @@ header a:focus {
   margin-bottom: 30px;
 }
 
-/* about us section styling*/
+/* team section styling */
 
 .background-color-about {
   background-color: var(--button-background);
 }
 
 .background-color-about h3 {
+  font-size: 16px;
   font-weight: 500;
+  line-height: 1.2;
   text-align: center;
   color: var(--menu-color);
   text-transform: none;
+  margin-bottom: 10px;
 }
 .background-color-about p {
   text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
   color: var(--paragraph-color);
+  margin-bottom: 16px;
 }
 
 .background-color-about figcaption {
-  padding: 30px 0;
-  background-color: #fff;
+  padding: 30px 32px;
+  background-color: var(--brand-colorAccent);
   border-radius: 0 0 4px 4px;
 }
 
@@ -208,6 +223,12 @@ header a:focus {
     0px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
 }
+
+.team-list {
+  gap: 30px;
+  display: flex;
+}
+
 /* icon styling */
 
 .icon {
@@ -216,6 +237,40 @@ header a:focus {
 .header-list .icon {
   margin-right: 10px;
 }
+
+.social-gap {
+  gap: 10px;
+}
+
+.social-icons-list {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  color: var(--icon-clients-color);
+}
+
+.social-icons-list:hover,
+.social-icons-list:focus {
+  background-color: var(--brand-color1);
+  border-radius: 50%;
+  color: var(--brand-colorAccent);
+}
+
+.social-icon-footer {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  background-color: var(--brand-colorAccent-op);
+  border-radius: 50%;
+}
+
+.social-icon-footer:hover,
+.social-icon-footer:focus {
+  background-color: var(--brand-color1);
+  border-radius: 50%;
+  color: var(--brand-colorAccent);
+}
+
 /* clients section styling */
 
 .box-clients {
@@ -242,13 +297,26 @@ header a:focus {
 /* footer styling */
 
 .footer-container {
-  background-color: var(--brand-background);
+  background-color: var(--brand-background1);
   color: var(--brand-colorAccent);
   padding: 60px 0px;
+  margin-right: 70px;
+}
+
+.social-footer {
+  padding: 72px 0px;
+  color: var(--brand-colorAccent);
+}
+
+.social-footer p {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--brand-colorAccent);
+  margin-bottom: 20px;
 }
 
 .background-footer {
-  background-color: var(--brand-background);
+  background-color: var(--brand-background1);
 }
 
 .adress-footer {
@@ -261,6 +329,7 @@ header a:focus {
 
 .logo-footer {
   color: var(--brand-colorAccent);
+  font-family: "raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 2;
@@ -271,7 +340,7 @@ header a:focus {
 .link-footer {
   color: var(--link-footercolor);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   line-height: 1.5;
   text-decoration: none;
 }
@@ -284,7 +353,7 @@ header a:focus {
 /* portfolio styling */
 
 .box-push {
-  background-color: var(--button-background);
+  background-color: var(--button-background1);
   font-weight: 500;
   line-height: 1.5;
   border-radius: 4px;
