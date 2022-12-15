@@ -136,7 +136,7 @@ header a:focus {
       var(--brand-background1),
       var(--brand-background2)
     ),
-    url(/images/header_image.jpg);
+    url(../images/header_image.jpg);
   max-width: 1600px;
   background-size: cover;
 }
